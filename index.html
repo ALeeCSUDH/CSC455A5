@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dancing Turtle</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #d1fae5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .turtle {
+      width: 200px;
+      height: 200px;
+      animation: dance 1.5s ease-in-out infinite;
+    }
+    @keyframes dance {
+      0%   { transform: rotate(0deg) scale(1) translateY(0); }
+      25%  { transform: rotate(15deg) scale(1.1) translateY(-20px); }
+      50%  { transform: rotate(-15deg) scale(1.1) translateY(0); }
+      75%  { transform: rotate(15deg) scale(1.1) translateY(-20px); }
+      100% { transform: rotate(0deg) scale(1) translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Dancing Turtle</h1>
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Turtle_icon_green.svg/512px-Turtle_icon_green.svg.png"
+    alt="Dancing Turtle"
+    class="turtle"
+  />
+</body>
+</html>
